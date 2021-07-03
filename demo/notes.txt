@@ -1,0 +1,33 @@
+Registration of a user to open account
+Check Balance to see balance and dept
+Transfer money to another user
+Take and Pay loans from BANK
+Transfer and Deposit fee goes to BANK
+
+
+#### Resource Method Chart
+
+Resource
+Address
+Protocol
+Param
+Response and Status codes
+
+| Resource | Address | Protocol | Param | Response and Status codes |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Register User | /register | POST | username:str,pasword:str | 200 ok, 301 invalid username |
+| Deposit | /deposit | POST | username:str,pasword:str,amount:str | 200 ok, 301 invalid username, 302 invalid password, 303 out of tokens, 304 invalid entry  |
+| Transfer | /transfer | POST | username:str,password:str,reciever:str,amount:int | 200 ok, 301 invalid username, 302 invalid password, 303 insuffient balance, 304 invalid entry  |
+| Check Balance | /balance | POST | username:str,password:str | 200 ok, 301 invalid username, 302 invalid password,304 invalid refillPassword |
+| Take Load | /takeloan | POST | username:str,password:str,amount:int | 200 ok, 301 invalid username, 302 invalid password, 304 invalid refillPassword, 304 invalid entry  |
+| Pay Load | /payloan | POST | username:str,password:str,amount:int | 200 ok, 301 invalid username, 302 invalid password, 303 insuffient balance, 304 invalid entry  |
+
+
+
+
+####Zip into multiparty on Mac
+`zip <Folder-Name> --out <Name>.zip -s <size partitions>m`
+eg: `zip inception-2015-12-05 --out inception-2015.zip -s 20m`
+eg: `zip inception-2015-12-05.zip --out inception-2015-12-05.zip -s 20m`
+
+
